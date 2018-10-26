@@ -283,4 +283,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<modules>
+		<module>e3-content</module>
+	</modules>
 </project>

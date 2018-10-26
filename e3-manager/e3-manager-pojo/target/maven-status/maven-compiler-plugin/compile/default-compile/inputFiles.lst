@@ -1,4 +1,5 @@
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbItemCat.java
+D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbItemDesc.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbItem.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbOrder.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbOrderShipping.java
@@ -11,6 +12,7 @@ D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbO
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbItemParamItem.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbItemExample.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbContentCategoryExample.java
+D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbItemDescExample.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbOrderItem.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbOrderShippingExample.java
 D:\eclipse-workspace\e3-manager\e3-manager-pojo\src\main\java\cn\e3mall\pojo\TbContent.java

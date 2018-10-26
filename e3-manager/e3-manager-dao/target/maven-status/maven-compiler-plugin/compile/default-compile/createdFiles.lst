@@ -5,5 +5,6 @@ cn\e3mall\mapper\TbItemParamMapper.class
 cn\e3mall\mapper\TbOrderShippingMapper.class
 cn\e3mall\mapper\TbItemMapper.class
 cn\e3mall\mapper\TbItemParamItemMapper.class
+cn\e3mall\mapper\TbItemDescMapper.class
 cn\e3mall\mapper\TbOrderMapper.class
 cn\e3mall\mapper\TbOrderItemMapper.class
