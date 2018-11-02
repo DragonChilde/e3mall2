@@ -72,6 +72,12 @@
   <sql id="Base_Column_List">
     id, parent_id, name, status, sort_order, is_parent, created, updated
   </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  	SELECT * FROM tb_content_category
+  	<where>
+  		id = ${_parameter}
+  	</where>
+  </select>
   <select id="selectByExample" parameterType="cn.e3mall.pojo.TbContentCategoryExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -93,6 +99,9 @@
     </if>
   </delete>
   <insert id="insert" parameterType="cn.e3mall.pojo.TbContentCategory">
+    <selectKey keyProperty="id" resultType="long" order="AFTER">
+    	select last_insert_id()
+    </selectKey>
     insert into tb_content_category (id, parent_id, name, 
       status, sort_order, is_parent, 
       created, updated)

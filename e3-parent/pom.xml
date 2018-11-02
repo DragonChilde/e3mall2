@@ -283,7 +283,8 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
 	<modules>
-		<module>e3-content</module>
+		<module>e3-search-web</module>
 	</modules>
 </project>

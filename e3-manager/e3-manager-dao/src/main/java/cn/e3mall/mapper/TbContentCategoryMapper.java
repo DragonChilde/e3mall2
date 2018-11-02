@@ -19,4 +19,6 @@ public interface TbContentCategoryMapper {
     int updateByExampleSelective(@Param("record") TbContentCategory record, @Param("example") TbContentCategoryExample example);
 
     int updateByExample(@Param("record") TbContentCategory record, @Param("example") TbContentCategoryExample example);
+    
+   TbContentCategory selectByPrimaryKey(Long id);
 }
