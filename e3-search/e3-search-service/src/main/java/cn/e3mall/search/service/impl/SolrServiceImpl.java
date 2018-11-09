@@ -21,6 +21,8 @@ public class SolrServiceImpl implements SolrService {
 		solrQuery.setQuery(keywors);
 		solrQuery.setStart((page -1)*rows);
 		solrQuery.setRows(rows);
+		solrQuery.set("df","item_title");
+		solrQuery.setHighlight(true);
 		solrQuery.addHighlightField("item_title");
 		solrQuery.setHighlightSimplePre("<em style=\"color:red\">");
 		solrQuery.setHighlightSimplePost("</em>");

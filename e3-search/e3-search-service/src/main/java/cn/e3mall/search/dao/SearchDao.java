@@ -10,6 +10,7 @@ import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Repository;
 
 import cn.e3mall.common.pojo.SearchItem;
@@ -24,7 +25,6 @@ public class SearchDao {
 	
 	public SearchResult getSolrSearchItem(SolrQuery query) throws Exception
 	{
-		
 		QueryResponse queryResponse = solrClient.query(query);
 		SolrDocumentList results = queryResponse.getResults();
 		

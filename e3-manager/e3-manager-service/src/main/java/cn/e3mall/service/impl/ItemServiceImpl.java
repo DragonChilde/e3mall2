@@ -3,8 +3,17 @@ package cn.e3mall.service.impl;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
+import javax.jms.Destination;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
 import org.apache.zookeeper.common.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageHelper;
@@ -30,6 +39,12 @@ public class ItemServiceImpl implements ItemService {
 	
 	@Autowired
 	private TbItemDescMapper itemDescMapper;
+	
+	@Autowired
+	private JmsTemplate jmsTemplate;
+	
+	@Autowired
+	private Destination topicDestination;
 
 	@Override
 	public TbItem getItemById(Long id) {
@@ -73,6 +88,15 @@ public class ItemServiceImpl implements ItemService {
 		itemDesc.setUpdated(new Date());
 		itemDescMapper.insert(itemDesc);
 		E3Result result = E3Result.ok();
+		
+		jmsTemplate.send(topicDestination, new MessageCreator() {
+			
+			@Override
+			public Message createMessage(Session session) throws JMSException {
+				TextMessage message = session.createTextMessage(itemId+"");
+				return message;
+			}
+		});
 		return result;
 	}
 

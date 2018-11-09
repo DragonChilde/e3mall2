@@ -23,4 +23,18 @@
 	WHERE
 		tb_i. STATUS = 1
   </select>
+  <select id="importSearchItemById" resultMap="searchItem" parameterType="long">
+  	SELECT
+	tb_i.id,
+	tb_i.title,
+	tb_i.sell_point,
+	tb_i.price,
+	tb_i.image,
+	tb_ic.name
+	FROM
+		tb_item AS tb_i
+	LEFT JOIN tb_item_cat AS tb_ic ON tb_i.cid = tb_ic.id
+	WHERE
+		tb_i. STATUS = 1 AND tb_i.id = #{itemId}
+  </select>
 </mapper>

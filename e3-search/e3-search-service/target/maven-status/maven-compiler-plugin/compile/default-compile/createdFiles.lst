@@ -1,4 +1,6 @@
 cn\e3mall\search\mapper\ItemMapper.class
 cn\e3mall\search\dao\SearchDao.class
-cn\e3mall\search\service\impl\SolrServiceImpl.class
 cn\e3mall\search\service\impl\SearchServiceImpl.class
+cn\e3mall\search\message\MyMessageListener.class
+cn\e3mall\search\message\ItemImportListener.class
+cn\e3mall\search\service\impl\SolrServiceImpl.class

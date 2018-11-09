@@ -9,6 +9,9 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
          http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+	<!-- 配置 读取properties文件 jdbc.properties -->
+	<context:property-placeholder location="classpath:conf/*.properties" />
+	
 	<context:component-scan base-package="cn.e3mall.search.controller" />
 	<mvc:annotation-driven />
 	<bean
@@ -26,4 +29,7 @@
 	<dubbo:reference interface="cn.e3mall.search.service.SearchService" id="searchService" />
 	<dubbo:reference interface="cn.e3mall.search.service.SolrService" id="solrService" />
 	
+	
+	<!--全局错误管理器  -->
+	<bean class="cn.e3mall.exception.controller.GlobalExceptionResolver"/>
 </beans>
