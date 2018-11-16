@@ -1,0 +1,31 @@
+id:${student.id}
+name:${student.name}
+age:${student.age}
+<table>
+	<#list studentList as student>
+	<#if student_index%2 == 0>
+		222
+	<#else>
+		111
+	</#if>
+	<tr>
+		<td>${student_index}</td>
+		<td>${student.id}</td>
+		<td>${student.name}</td>
+		<td>${student.age}</td>
+	</tr>
+	</#list>
+</table>
+${date?date}
+${date?time}
+${date?datetime}
+${date?string("yyyy-MM-dd HH:mm:ss")}
+
+${val!"val is null"}
+<#if val??>
+val is not null
+<#else>
+val is null
+</#if>
+
+<#include "test.tfl">

@@ -1,0 +1,604 @@
+
+
+[INFO ] 2018-11-15 15:32:59,490 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2018-11-15 15:35:46,271 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2018-11-16 15:44:30,753 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:270)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2018-11-16 15:44:30,832 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2018-11-16 15:44:30,833 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:590)
+Refreshing Root WebApplicationContext: startup date [Fri Nov 16 15:44:30 CST 2018]; root of context hierarchy
+
+
+[INFO ] 2018-11-16 15:44:30,868 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:316)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2018-11-16 15:44:31,394 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[WARN ] 2018-11-16 15:44:31,495 method:com.alibaba.dubbo.config.spring.extension.SpringExtensionFactory.getExtension(SpringExtensionFactory.java:63)
+ [DUBBO] No spring extension(bean) named:defaultCompiler, try to find an extension(bean) of type java.lang.String, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[WARN ] 2018-11-16 15:44:31,496 method:com.alibaba.dubbo.config.spring.extension.SpringExtensionFactory.getExtension(SpringExtensionFactory.java:77)
+ [DUBBO] No spring extension(bean) named:defaultCompiler, type:java.lang.String found, stop get bean., dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[WARN ] 2018-11-16 15:44:31,736 method:com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.startQosServer(QosProtocolWrapper.java:101)
+ [DUBBO] Fail to start qos server: , dubbo version: 2.6.4, current host: 192.168.0.166
+java.lang.NoClassDefFoundError: io/netty/channel/EventLoopGroup
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.startQosServer(QosProtocolWrapper.java:95)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:106)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:65)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:394)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:66)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:171)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:257)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1098)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:409)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.ClassNotFoundException: io.netty.channel.EventLoopGroup
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	... 45 more
+
+
+[INFO ] 2018-11-16 15:44:31,840 method:org.apache.curator.framework.imps.CuratorFrameworkImpl.start(CuratorFrameworkImpl.java:224)
+Starting
+
+
+[INFO ] 2018-11-16 15:44:31,848 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT
+
+
+[INFO ] 2018-11-16 15:44:31,849 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=FYkf-PC
+
+
+[INFO ] 2018-11-16 15:44:31,850 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=9.0.4
+
+
+[INFO ] 2018-11-16 15:44:31,850 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2018-11-16 15:44:31,851 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Java\jdk-9.0.4
+
+
+[INFO ] 2018-11-16 15:44:31,851 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=D:\Server\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2018-11-16 15:44:31,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Java\jdk-9.0.4\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;D:\xampp\php;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\TortoiseSVN\bin;D:\xampp\php;D:\xampp\mysql\bin\;D:\MGW\bin;D:\MinGW\include;D:\MinGW\lib;D:\Server\tomcat-9.0.8\lib;D:\Server\tomcat-9.0.8\bin;C:\Java\jdk-9.0.4\bin;d:\Program Files\Git\cmd;C:\Users\FYkf\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\FYkf\AppData\Local\Programs\Python\Python35\;d:\Program Files\SSH Communications Security\SSH Secure Shell;C:\Java\jdk-9.0.4\bin;D:\Server\apache-maven-3.5.4\bin\;.
+
+
+[INFO ] 2018-11-16 15:44:31,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\FYkf\AppData\Local\Temp\
+
+
+[INFO ] 2018-11-16 15:44:31,852 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2018-11-16 15:44:31,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2018-11-16 15:44:31,853 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2018-11-16 15:44:31,854 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2018-11-16 15:44:31,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=FYkf
+
+
+[INFO ] 2018-11-16 15:44:31,855 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\FYkf
+
+
+[INFO ] 2018-11-16 15:44:31,856 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=D:\eclipse-workspace\e3-sso-web
+
+
+[INFO ] 2018-11-16 15:44:31,857 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:442)
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@11a02e3a
+
+
+[INFO ] 2018-11-16 15:44:31,890 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1029)
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2018-11-16 15:44:31,894 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:879)
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+
+[INFO ] 2018-11-16 15:44:31,917 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:273)
+ [DUBBO] Register: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=consumers&check=false&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354271679, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:32,816 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1303)
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x100003c21a8002f, negotiated timeout = 40000
+
+
+[INFO ] 2018-11-16 15:44:32,824 method:org.apache.curator.framework.state.ConnectionStateManager.postState(ConnectionStateManager.java:228)
+State change: CONNECTED
+
+
+[INFO ] 2018-11-16 15:44:34,747 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:298)
+ [DUBBO] Subscribe: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354271679, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:35,079 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:387)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354271679, urls: [dubbo://192.168.0.166:20883/cn.e3mall.sso.service.UserService?anyhost=true&application=e3-sso&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=92260&side=provider&timeout=60000&timestamp=1542354145852, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=configurators&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354271679, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354271679], dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:35,227 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:282)
+ [DUBBO] Successed connect to server /192.168.0.166:20883 from NettyClient 192.168.0.166 using dubbo version 2.6.4, channel is NettyChannel [channel=[id: 0x7503596f, /192.168.0.166:62671 => /192.168.0.166:20883]], dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:35,228 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:91)
+ [DUBBO] Start NettyClient FYkf-PC/192.168.0.166 connect to the server /192.168.0.166:20883, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:35,303 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:425)
+ [DUBBO] Refer dubbo service cn.e3mall.sso.service.UserService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=e3-sso-web&check=false&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&register.ip=192.168.0.166&remote.timestamp=1542354145852&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1542354271679, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:35,914 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/page/register]}" onto public java.lang.String cn.e3mall.sso.controller.RegisterController.showRegister()
+
+
+[INFO ] 2018-11-16 15:44:35,916 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/user/check/{param}/{type}]}" onto public cn.e3mall.common.utils.E3Result cn.e3mall.sso.controller.RegisterController.checkData(java.lang.String,java.lang.Integer)
+
+
+[INFO ] 2018-11-16 15:44:36,560 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 16 15:44:30 CST 2018]; root of context hierarchy
+
+
+[INFO ] 2018-11-16 15:44:37,234 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 16 15:44:30 CST 2018]; root of context hierarchy
+
+
+[INFO ] 2018-11-16 15:44:37,318 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+
+[INFO ] 2018-11-16 15:44:37,321 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+
+[INFO ] 2018-11-16 15:44:37,324 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+
+
+[INFO ] 2018-11-16 15:44:37,367 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:310)
+Root WebApplicationContext: initialization completed in 6612 ms
+
+
+[INFO ] 2018-11-16 15:44:37,459 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+FrameworkServlet 'e3-sso-web': initialization started
+
+
+[INFO ] 2018-11-16 15:44:37,463 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:590)
+Refreshing WebApplicationContext for namespace 'e3-sso-web-servlet': startup date [Fri Nov 16 15:44:37 CST 2018]; parent: Root WebApplicationContext
+
+
+[INFO ] 2018-11-16 15:44:37,464 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:316)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2018-11-16 15:44:37,522 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2018-11-16 15:44:37,543 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:273)
+ [DUBBO] Register: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=consumers&check=false&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:38,079 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:298)
+ [DUBBO] Subscribe: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:38,113 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:387)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541, urls: [dubbo://192.168.0.166:20883/cn.e3mall.sso.service.UserService?anyhost=true&application=e3-sso&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=92260&side=provider&timeout=60000&timestamp=1542354145852, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=configurators&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541], dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:38,116 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:425)
+ [DUBBO] Refer dubbo service cn.e3mall.sso.service.UserService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=e3-sso-web&check=false&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&register.ip=192.168.0.166&remote.timestamp=1542354145852&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1542354277541, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[WARN ] 2018-11-16 15:44:38,124 method:com.alibaba.dubbo.config.model.ApplicationModel.initConsumerModel(ApplicationModel.java:65)
+ [DUBBO] Already register the same consumer:cn.e3mall.sso.service.UserService, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 15:44:38,149 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/page/register]}" onto public java.lang.String cn.e3mall.sso.controller.RegisterController.showRegister()
+
+
+[INFO ] 2018-11-16 15:44:38,150 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/user/check/{param}/{type}]}" onto public cn.e3mall.common.utils.E3Result cn.e3mall.sso.controller.RegisterController.checkData(java.lang.String,java.lang.Integer)
+
+
+[INFO ] 2018-11-16 15:44:38,187 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-sso-web-servlet': startup date [Fri Nov 16 15:44:37 CST 2018]; parent: Root WebApplicationContext
+
+
+[INFO ] 2018-11-16 15:44:38,202 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-sso-web-servlet': startup date [Fri Nov 16 15:44:37 CST 2018]; parent: Root WebApplicationContext
+
+
+[INFO ] 2018-11-16 15:44:38,233 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+
+[INFO ] 2018-11-16 15:44:38,236 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+
+[INFO ] 2018-11-16 15:44:38,238 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+
+
+[INFO ] 2018-11-16 15:44:38,272 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:509)
+FrameworkServlet 'e3-sso-web': initialization completed in 812 ms
+
+
+[INFO ] 2018-11-16 16:12:04,370 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:270)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2018-11-16 16:12:04,527 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2018-11-16 16:12:04,528 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:590)
+Refreshing Root WebApplicationContext: startup date [Fri Nov 16 16:12:04 CST 2018]; root of context hierarchy
+
+
+[INFO ] 2018-11-16 16:12:04,568 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:316)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2018-11-16 16:12:05,221 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[WARN ] 2018-11-16 16:12:05,312 method:com.alibaba.dubbo.config.spring.extension.SpringExtensionFactory.getExtension(SpringExtensionFactory.java:63)
+ [DUBBO] No spring extension(bean) named:defaultCompiler, try to find an extension(bean) of type java.lang.String, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[WARN ] 2018-11-16 16:12:05,313 method:com.alibaba.dubbo.config.spring.extension.SpringExtensionFactory.getExtension(SpringExtensionFactory.java:77)
+ [DUBBO] No spring extension(bean) named:defaultCompiler, type:java.lang.String found, stop get bean., dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[WARN ] 2018-11-16 16:12:05,543 method:com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.startQosServer(QosProtocolWrapper.java:101)
+ [DUBBO] Fail to start qos server: , dubbo version: 2.6.4, current host: 192.168.0.166
+java.lang.NoClassDefFoundError: io/netty/channel/EventLoopGroup
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.startQosServer(QosProtocolWrapper.java:95)
+	at com.alibaba.dubbo.qos.protocol.QosProtocolWrapper.refer(QosProtocolWrapper.java:68)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper.refer(ProtocolFilterWrapper.java:106)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolListenerWrapper.refer(ProtocolListenerWrapper.java:65)
+	at com.alibaba.dubbo.rpc.Protocol$Adaptive.refer(Protocol$Adaptive.java)
+	at com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:394)
+	at com.alibaba.dubbo.config.ReferenceConfig.init(ReferenceConfig.java:333)
+	at com.alibaba.dubbo.config.ReferenceConfig.get(ReferenceConfig.java:163)
+	at com.alibaba.dubbo.config.spring.ReferenceBean.getObject(ReferenceBean.java:66)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:171)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:101)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:257)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1322)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1288)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1098)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:409)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:291)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+Caused by: java.lang.ClassNotFoundException: io.netty.channel.EventLoopGroup
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1702)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1547)
+	... 45 more
+
+
+[INFO ] 2018-11-16 16:12:05,658 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:200)
+ [DUBBO] Load registry store file C:\Users\FYkf\.dubbo\dubbo-registry-e3-sso-web-127.0.0.1:2181.cache, data: {cn.e3mall.sso.service.UserService=empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=configurators&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541 empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=123784&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542354277541 dubbo://192.168.0.166:20883/cn.e3mall.sso.service.UserService?anyhost=true&application=e3-sso&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData&pid=92260&side=provider&timeout=60000&timestamp=1542354145852}, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:05,797 method:org.apache.curator.framework.imps.CuratorFrameworkImpl.start(CuratorFrameworkImpl.java:224)
+Starting
+
+
+[INFO ] 2018-11-16 16:12:05,805 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.13-2d71af4dbe22557fda74f9a9b4309b15a7487f03, built on 06/29/2018 00:39 GMT
+
+
+[INFO ] 2018-11-16 16:12:05,805 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=FYkf-PC
+
+
+[INFO ] 2018-11-16 16:12:05,806 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=9.0.4
+
+
+[INFO ] 2018-11-16 16:12:05,806 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2018-11-16 16:12:05,807 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=C:\Java\jdk-9.0.4
+
+
+[INFO ] 2018-11-16 16:12:05,807 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=D:\Server\apache-maven-3.5.4\boot\plexus-classworlds-2.5.2.jar
+
+
+[INFO ] 2018-11-16 16:12:05,808 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=C:\Java\jdk-9.0.4\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;D:\xampp\php;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\TortoiseSVN\bin;D:\xampp\php;D:\xampp\mysql\bin\;D:\MGW\bin;D:\MinGW\include;D:\MinGW\lib;D:\Server\tomcat-9.0.8\lib;D:\Server\tomcat-9.0.8\bin;C:\Java\jdk-9.0.4\bin;d:\Program Files\Git\cmd;C:\Users\FYkf\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\FYkf\AppData\Local\Programs\Python\Python35\;d:\Program Files\SSH Communications Security\SSH Secure Shell;C:\Java\jdk-9.0.4\bin;D:\Server\apache-maven-3.5.4\bin\;.
+
+
+[INFO ] 2018-11-16 16:12:05,808 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\FYkf\AppData\Local\Temp\
+
+
+[INFO ] 2018-11-16 16:12:05,808 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2018-11-16 16:12:05,809 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2018-11-16 16:12:05,809 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2018-11-16 16:12:05,810 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2018-11-16 16:12:05,810 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=FYkf
+
+
+[INFO ] 2018-11-16 16:12:05,812 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\FYkf
+
+
+[INFO ] 2018-11-16 16:12:05,812 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=D:\eclipse-workspace\e3-sso-web
+
+
+[INFO ] 2018-11-16 16:12:05,813 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:442)
+Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=60000 watcher=org.apache.curator.ConnectionState@1f395d00
+
+
+[INFO ] 2018-11-16 16:12:06,087 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1029)
+Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2018-11-16 16:12:06,094 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:879)
+Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+
+
+[INFO ] 2018-11-16 16:12:06,115 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:273)
+ [DUBBO] Register: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=consumers&check=false&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355925491, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:06,794 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1303)
+Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x100003c21a80031, negotiated timeout = 40000
+
+
+[INFO ] 2018-11-16 16:12:06,803 method:org.apache.curator.framework.state.ConnectionStateManager.postState(ConnectionStateManager.java:228)
+State change: CONNECTED
+
+
+[INFO ] 2018-11-16 16:12:08,464 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:298)
+ [DUBBO] Subscribe: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355925491, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:08,507 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:387)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355925491, urls: [dubbo://192.168.0.166:20883/cn.e3mall.sso.service.UserService?anyhost=true&application=e3-sso&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123808&side=provider&timeout=60000&timestamp=1542355838329, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=configurators&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355925491, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355925491], dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:08,677 method:com.alibaba.dubbo.remoting.transport.AbstractClient.connect(AbstractClient.java:282)
+ [DUBBO] Successed connect to server /192.168.0.166:20883 from NettyClient 192.168.0.166 using dubbo version 2.6.4, channel is NettyChannel [channel=[id: 0x5e30f3be, /192.168.0.166:64942 => /192.168.0.166:20883]], dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:08,680 method:com.alibaba.dubbo.remoting.transport.AbstractClient.<init>(AbstractClient.java:91)
+ [DUBBO] Start NettyClient FYkf-PC/192.168.0.166 connect to the server /192.168.0.166:20883, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:08,786 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:425)
+ [DUBBO] Refer dubbo service cn.e3mall.sso.service.UserService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=e3-sso-web&check=false&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&register.ip=192.168.0.166&remote.timestamp=1542355838329&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1542355925491, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:09,550 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/user/register],methods=[POST]}" onto public cn.e3mall.common.utils.E3Result cn.e3mall.sso.controller.RegisterController.register(cn.e3mall.pojo.TbUser)
+
+
+[INFO ] 2018-11-16 16:12:09,551 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/page/register]}" onto public java.lang.String cn.e3mall.sso.controller.RegisterController.showRegister()
+
+
+[INFO ] 2018-11-16 16:12:09,552 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/user/check/{param}/{type}]}" onto public cn.e3mall.common.utils.E3Result cn.e3mall.sso.controller.RegisterController.checkData(java.lang.String,java.lang.Integer)
+
+
+[INFO ] 2018-11-16 16:12:09,773 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 16 16:12:04 CST 2018]; root of context hierarchy
+
+
+[INFO ] 2018-11-16 16:12:09,820 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 16 16:12:04 CST 2018]; root of context hierarchy
+
+
+[INFO ] 2018-11-16 16:12:09,898 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+
+[INFO ] 2018-11-16 16:12:09,902 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+
+[INFO ] 2018-11-16 16:12:09,906 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+
+
+[INFO ] 2018-11-16 16:12:09,963 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:310)
+Root WebApplicationContext: initialization completed in 5524 ms
+
+
+[INFO ] 2018-11-16 16:12:10,060 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:494)
+FrameworkServlet 'e3-sso-web': initialization started
+
+
+[INFO ] 2018-11-16 16:12:10,080 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:590)
+Refreshing WebApplicationContext for namespace 'e3-sso-web-servlet': startup date [Fri Nov 16 16:12:10 CST 2018]; parent: Root WebApplicationContext
+
+
+[INFO ] 2018-11-16 16:12:10,081 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:316)
+Loading XML bean definitions from class path resource [spring/springmvc.xml]
+
+
+[INFO ] 2018-11-16 16:12:10,135 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2018-11-16 16:12:10,147 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:273)
+ [DUBBO] Register: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=consumers&check=false&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355930146, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:10,802 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:298)
+ [DUBBO] Subscribe: consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355930146, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:10,815 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:387)
+ [DUBBO] Notify urls for subscribe url consumer://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=providers,configurators,routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355930146, urls: [dubbo://192.168.0.166:20883/cn.e3mall.sso.service.UserService?anyhost=true&application=e3-sso&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123808&side=provider&timeout=60000&timestamp=1542355838329, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=configurators&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355930146, empty://192.168.0.166/cn.e3mall.sso.service.UserService?application=e3-sso-web&category=routers&dubbo=2.0.2&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&revision=0.0.1-SNAPSHOT&side=consumer&timestamp=1542355930146], dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:10,817 method:com.alibaba.dubbo.config.ReferenceConfig.createProxy(ReferenceConfig.java:425)
+ [DUBBO] Refer dubbo service cn.e3mall.sso.service.UserService from url zookeeper://127.0.0.1:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&application=e3-sso-web&check=false&dubbo=2.0.2&generic=false&interface=cn.e3mall.sso.service.UserService&methods=checkData,register&pid=123152&register.ip=192.168.0.166&remote.timestamp=1542355838329&revision=0.0.1-SNAPSHOT&side=consumer&timeout=60000&timestamp=1542355930146, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[WARN ] 2018-11-16 16:12:10,822 method:com.alibaba.dubbo.config.model.ApplicationModel.initConsumerModel(ApplicationModel.java:65)
+ [DUBBO] Already register the same consumer:cn.e3mall.sso.service.UserService, dubbo version: 2.6.4, current host: 192.168.0.166
+
+
+[INFO ] 2018-11-16 16:12:10,847 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/user/register],methods=[POST]}" onto public cn.e3mall.common.utils.E3Result cn.e3mall.sso.controller.RegisterController.register(cn.e3mall.pojo.TbUser)
+
+
+[INFO ] 2018-11-16 16:12:10,848 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/page/register]}" onto public java.lang.String cn.e3mall.sso.controller.RegisterController.showRegister()
+
+
+[INFO ] 2018-11-16 16:12:10,848 method:org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:547)
+Mapped "{[/user/check/{param}/{type}]}" onto public cn.e3mall.common.utils.E3Result cn.e3mall.sso.controller.RegisterController.checkData(java.lang.String,java.lang.Integer)
+
+
+[INFO ] 2018-11-16 16:12:10,870 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-sso-web-servlet': startup date [Fri Nov 16 16:12:10 CST 2018]; parent: Root WebApplicationContext
+
+
+[INFO ] 2018-11-16 16:12:10,888 method:org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:574)
+Looking for @ControllerAdvice: WebApplicationContext for namespace 'e3-sso-web-servlet': startup date [Fri Nov 16 16:12:10 CST 2018]; parent: Root WebApplicationContext
+
+
+[INFO ] 2018-11-16 16:12:10,913 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/css/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+
+
+[INFO ] 2018-11-16 16:12:10,916 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/js/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#1'
+
+
+[INFO ] 2018-11-16 16:12:10,919 method:org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:373)
+Mapped URL path [/images/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#2'
+
+
+[INFO ] 2018-11-16 16:12:10,961 method:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:509)
+FrameworkServlet 'e3-sso-web': initialization completed in 901 ms
+
+
+[WARN ] 2018-11-16 16:14:22,691 method:org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1205)
+No mapping found for HTTP request with URI [/page/login] in DispatcherServlet with name 'e3-sso-web'

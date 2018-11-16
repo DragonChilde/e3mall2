@@ -126,5 +126,11 @@
 		    <version>2.0.1</version>
 		</dependency>
 		
+		<!-- Redis客户端 -->
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+		
   </dependencies>
 </project>
