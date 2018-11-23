@@ -6,4 +6,5 @@ import cn.e3mall.pojo.TbUser;
 public interface UserService {
 	public E3Result checkData(String param,int type);
 	public E3Result register(TbUser user);
+
 }

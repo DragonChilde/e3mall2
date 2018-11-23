@@ -2,12 +2,14 @@ package cn.e3mall.sso.service.impl;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
+import cn.e3mall.common.jedis.JedisClient;
 import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.mapper.TbUserMapper;
 import cn.e3mall.pojo.TbUser;
@@ -20,6 +22,8 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private TbUserMapper userMapper;
+	
+
 
 	@Override
 	public E3Result checkData(String param, int type) {
@@ -78,5 +82,6 @@ public class UserServiceImpl implements UserService{
 		userMapper.insert(user);
 		return E3Result.ok();
 	}
+
 
 }
