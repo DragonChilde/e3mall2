@@ -13,9 +13,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import cn.e3mall.cart.service.CartService;
 import cn.e3mall.common.utils.CookieUtils;
 import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.common.utils.JsonUtils;
@@ -35,14 +37,17 @@ public class CartController {
 	@Value("${CART_EXPIRE}")
 	private Integer CART_EXPIRE;
 	
+	@Autowired
+	private CartService cartService;
+	
 	@RequestMapping(value="/cart/add/{itemId}")
-	public String addCartItem(@PathVariable Long itemId, Integer num,HttpServletRequest request,HttpServletResponse response)
+	public String addCartItem(@PathVariable Long itemId, @RequestParam(defaultValue="1")Integer num,HttpServletRequest request,HttpServletResponse response)
 	{
 		
 		TbUser user = (TbUser) request.getAttribute("user");
-		if(user!=null && "".equals(user))
+		if(user!=null)
 		{
-			
+			cartService.addCart(user.getId(), itemId, num);
 			return "cartSuccess";
 		}
 		
@@ -86,9 +91,17 @@ public class CartController {
 	}
 	
 	@RequestMapping(value="/cart/cart")
-	public String showCartList(HttpServletRequest request,Model model)
+	public String showCartList(HttpServletRequest request,HttpServletResponse response,Model model)
 	{
+		TbUser user = (TbUser) request.getAttribute("user");
 		List<TbItem> list = getItemListByCookie(request);
+		if(user!=null)
+		{
+			cartService.mergeCart(user.getId(), list);
+			CookieUtils.deleteCookie(request, response, TT_CART);
+			list = cartService.getCartList(user.getId());
+		}
+		
 		model.addAttribute("cartList", list);
 		return "cart";
 	}
@@ -97,6 +110,13 @@ public class CartController {
 	@ResponseBody
 	public E3Result updateCartNum(@PathVariable Long itemId,@PathVariable Integer num,HttpServletRequest request,HttpServletResponse response)
 	{
+		TbUser user = (TbUser) request.getAttribute("user");
+		if(user!=null)
+		{
+			cartService.updateCartNum(user.getId(), itemId, num);
+			return E3Result.ok();
+		}
+		
 		List<TbItem> list = getItemListByCookie(request);
 		for(TbItem item:list)
 		{
@@ -112,6 +132,13 @@ public class CartController {
 	@RequestMapping(value="/cart/delete/{itemId}")
 	public String delteCartItem(@PathVariable Long itemId,HttpServletRequest request,HttpServletResponse response)
 	{
+		TbUser user = (TbUser) request.getAttribute("user");
+		if(user!=null) {
+			
+			cartService.deleteCartItem(user.getId(), itemId);
+			return "redirect:/cart/cart.html";
+		}
+		
 		List<TbItem> list = getItemListByCookie(request);
 		for(TbItem item:list)
 		{

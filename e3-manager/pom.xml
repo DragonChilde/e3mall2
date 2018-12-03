@@ -34,6 +34,10 @@
 						<!-- 可以灵活配置端口号 -->
 						<port>9999</port>
 						 <uriEncoding>UTF-8</uriEncoding>
+						 <url>http://localhost:8080/manager/text</url>
+						<username>admin</username>
+						<password>admin</password>
+						 
 					</configuration>
   		</plugin>
   	</plugins>
