@@ -5,9 +5,8 @@
     <artifactId>e3-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-	<groupId>cn.e3mall</groupId>
-	<artifactId>e3-content</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+
+  <artifactId>e3-content</artifactId>
   <packaging>pom</packaging>
   <modules>
   	<module>e3-content-interface</module>
